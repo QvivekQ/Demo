@@ -1,0 +1,573 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fd9a33c8f33, pid=26883, tid=0x00007fd98721c700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_152-b29) (build 1.8.0_152-release-1136-b29)
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b29 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x83ef33]  Method::name_and_sig_as_C_string(Klass*, Symbol*, Symbol*)+0x33
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fd99c0bd000):  JavaThread "C1 CompilerThread2" daemon [_thread_in_vm, id=26895, stack(0x00007fd98711c000,0x00007fd98721d000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 128 (SI_KERNEL), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000018, RBX=0x00017fd9a457f7b0, RCX=0x0000000000000000, RDX=0xc0cfc0ffc1000000
+RSP=0x00007fd98721a8c0, RBP=0x00007fd98721a900, RSI=0x00007fd9a457e0e8, RDI=0x00007fd95805a820
+R8 =0x000000000000c0ff, R9 =0x0000000000000000, R10=0x000000000000002a, R11=0x00007fd98c855fc0
+R12=0x00007fd99c0bd000, R13=0x00007fd98721ac60, R14=0x00007fd9a453e370, R15=0x00007fd9a453e370
+RIP=0x00007fd9a33c8f33, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007fd98721a8c0)
+0x00007fd98721a8c0:   00007fd95805a820 0000000b00000005
+0x00007fd98721a8d0:   0000000000000000 0000000100022ca8
+0x00007fd98721a8e0:   00007fd99c0bd000 00007fd98721ac60
+0x00007fd98721a8f0:   00007fd9a453e370 00017fd9a457f7b0
+0x00007fd98721a900:   00007fd98721aad0 00007fd9a3314ac1
+0x00007fd98721a910:   0000000000000000 00007fd99c0bd000
+0x00007fd98721a920:   000000ac000000ac 00007fd98721b1a0
+0x00007fd98721a930:   00007fd95402f7e0 0010000000000000
+0x00007fd98721a940:   0000000000000000 00007fd954040d70
+0x00007fd98721a950:   00007fd98721a9f0 0000000000007fe8
+0x00007fd98721a960:   0000000100022ca8 0000000000007f01
+0x00007fd98721a970:   00007fd954038ef0 00007fd98721ba48
+0x00007fd98721a980:   00007fd98721a9f0 00007fd9a2e6155f
+0x00007fd98721a990:   0000000000018360 00007fd98721ba00
+0x00007fd98721a9a0:   0000000000000000 0000000000000000
+0x00007fd98721a9b0:   00007fd95402fa90 00007fd9a34b6d6f
+0x00007fd98721a9c0:   00007fd98721ab90 0000000000000028
+0x00007fd98721a9d0:   00007fd98721ab60 00007fd9a33ea2bb
+0x00007fd98721a9e0:   00007fd98721ba48 00007fd954040ba0
+0x00007fd98721a9f0:   00007fd98721aa40 01007fd9a33ead25
+0x00007fd98721aa00:   0000000000000000 ffffffff00fa019e
+0x00007fd98721aa10:   0000000000000000 00007fd954040ba0
+0x00007fd98721aa20:   0000000000000003 0000000000000018
+0x00007fd98721aa30:   00007fd954040c20 00007fd958064410
+0x00007fd98721aa40:   00007fd99c0bd9e0 00007fd958053dc0
+0x00007fd98721aa50:   00007fd95805a820 00007fd95805bda8
+0x00007fd98721aa60:   0000000000018360 0000000000000002
+0x00007fd98721aa70:   0000000000000000 00007fd954008000
+0x00007fd98721aa80:   0000000000000000 00007fd954008000
+0x00007fd98721aa90:   00007fd958063f00 0000000000000002
+0x00007fd98721aaa0:   0000000000000000 00007fd99c0bd000
+0x00007fd98721aab0:   0000000100022ca8 00007fd98721ac60 
+
+Instructions: (pc=0x00007fd9a33c8f33)
+0x00007fd9a33c8f13:   4c 89 75 f0 4c 89 7d f8 48 83 ec 40 49 89 d7 e8
+0x00007fd9a33c8f23:   09 f7 f1 ff 48 89 c7 48 89 45 c0 e8 6d 2c 9d ff
+0x00007fd9a33c8f33:   44 0f b7 33 45 0f b7 2f 89 c2 31 f6 89 45 c8 46
+0x00007fd9a33c8f43:   8d 74 32 01 47 8d 2c 2e 4d 63 f6 41 8d 7d 01 4d 
+
+Register to memory mapping:
+
+RAX=0x0000000000000018 is an unknown value
+RBX=0x00017fd9a457f7b0 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0xc0cfc0ffc1000000 is an unknown value
+RSP=0x00007fd98721a8c0 is pointing into the stack for thread: 0x00007fd99c0bd000
+RBP=0x00007fd98721a900 is pointing into the stack for thread: 0x00007fd99c0bd000
+RSI=0x00007fd9a457e0e8 is an unknown value
+RDI=0x00007fd95805a820 is an unknown value
+R8 =0x000000000000c0ff is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x000000000000002a is an unknown value
+R11=0x00007fd98c855fc0 is pointing into metadata
+R12=0x00007fd99c0bd000 is a thread
+R13=0x00007fd98721ac60 is pointing into the stack for thread: 0x00007fd99c0bd000
+R14=0x00007fd9a453e370 is an unknown value
+R15=0x00007fd9a453e370 is an unknown value
+
+
+Stack: [0x00007fd98711c000,0x00007fd98721d000],  sp=0x00007fd98721a8c0,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x83ef33]  Method::name_and_sig_as_C_string(Klass*, Symbol*, Symbol*)+0x33
+V  [libjvm.so+0x78aac1]  LinkResolver::resolve_method(methodHandle&, KlassHandle, Symbol*, Symbol*, KlassHandle, bool, bool, Thread*)+0x331
+V  [libjvm.so+0x78b38f]  LinkResolver::linktime_resolve_static_method(methodHandle&, KlassHandle, Symbol*, Symbol*, KlassHandle, bool, Thread*)+0x3f
+V  [libjvm.so+0x78d588]  LinkResolver::resolve_static_call(CallInfo&, KlassHandle&, Symbol*, Symbol*, KlassHandle, bool, bool, Thread*)+0x58
+V  [libjvm.so+0x78db3f]  LinkResolver::resolve_static_call_or_null(KlassHandle, Symbol*, Symbol*, KlassHandle, bool)+0xcf
+V  [libjvm.so+0x40155e]  ciEnv::lookup_method(InstanceKlass*, InstanceKlass*, Symbol*, Symbol*, Bytecodes::Code)+0x23e
+V  [libjvm.so+0x40475d]  ciEnv::get_method_by_index_impl(constantPoolHandle, int, Bytecodes::Code, ciInstanceKlass*)+0x1ad
+V  [libjvm.so+0x404bda]  ciEnv::get_method_by_index(constantPoolHandle, int, Bytecodes::Code, ciInstanceKlass*)+0xea
+V  [libjvm.so+0x42d8a9]  ciBytecodeStream::get_method(bool&, ciSignature**)+0x199
+V  [libjvm.so+0x361eb3]  GraphBuilder::invoke(Bytecodes::Code)+0x33
+V  [libjvm.so+0x363ad3]  GraphBuilder::iterate_bytecodes_for_block(int)+0x6d3
+V  [libjvm.so+0x360cf3]  GraphBuilder::iterate_all_blocks(bool)+0x143
+V  [libjvm.so+0x36596e]  GraphBuilder::GraphBuilder(Compilation*, IRScope*)+0x4fe
+V  [libjvm.so+0x36c01c]  IR::IR(Compilation*, ciMethod*, int)+0x21c
+V  [libjvm.so+0x34c2fd]  Compilation::build_hir()+0xed
+V  [libjvm.so+0x34ca45]  Compilation::compile_java_method()+0x85
+V  [libjvm.so+0x34cb62]  Compilation::compile_method()+0x42
+V  [libjvm.so+0x34ce90]  Compilation::Compilation(AbstractCompiler*, ciEnv*, ciMethod*, int, BufferBlob*)+0x240
+V  [libjvm.so+0x34d8a3]  Compiler::compile_method(ciEnv*, ciMethod*, int)+0xb3
+V  [libjvm.so+0x490456]  CompileBroker::invoke_compiler_on_method(CompileTask*)+0xd16
+V  [libjvm.so+0x494677]  CompileBroker::compiler_thread_loop()+0x657
+V  [libjvm.so+0x9ee441]  JavaThread::thread_main_inner()+0xf1
+V  [libjvm.so+0x9ee628]  JavaThread::run()+0x1b8
+V  [libjvm.so+0x8abbd2]  java_start(Thread*)+0x122
+C  [libpthread.so.0+0x76ba]  start_thread+0xca
+
+
+Current CompileTask:
+C1:    126   33       3       sun.nio.cs.UTF_8$Decoder::decode (779 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fd99c00a800 JavaThread "DestroyJavaVM" [_thread_blocked, id=26884, stack(0x00007fd9a45e4000,0x00007fd9a46e5000)]
+  0x00007fd99c0c8000 JavaThread "Service Thread" daemon [_thread_blocked, id=26896, stack(0x00007fd98701b000,0x00007fd98711c000)]
+=>0x00007fd99c0bd000 JavaThread "C1 CompilerThread2" daemon [_thread_in_vm, id=26895, stack(0x00007fd98711c000,0x00007fd98721d000)]
+  0x00007fd99c0bb800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=26894, stack(0x00007fd98721d000,0x00007fd98731e000)]
+  0x00007fd99c0b8800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=26893, stack(0x00007fd98731e000,0x00007fd98741f000)]
+  0x00007fd99c0b7000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26892, stack(0x00007fd98741f000,0x00007fd987520000)]
+  0x00007fd99c084000 JavaThread "Finalizer" daemon [_thread_blocked, id=26891, stack(0x00007fd9877f8000,0x00007fd9878f9000)]
+  0x00007fd99c07f800 JavaThread "Reference Handler" daemon [_thread_blocked, id=26890, stack(0x00007fd9878f9000,0x00007fd9879fa000)]
+
+Other Threads:
+  0x00007fd99c078000 VMThread [stack: 0x00007fd9879fa000,0x00007fd987afb000] [id=26889]
+  0x00007fd99c0ca800 WatcherThread [stack: 0x00007fd986f1a000,0x00007fd98701b000] [id=26897]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 36864K, used 5883K [0x00000000d6f80000, 0x00000000d9880000, 0x0000000100000000)
+  eden space 31744K, 18% used [0x00000000d6f80000,0x00000000d753ee90,0x00000000d8e80000)
+  from space 5120K, 0% used [0x00000000d9380000,0x00000000d9380000,0x00000000d9880000)
+  to   space 5120K, 0% used [0x00000000d8e80000,0x00000000d8e80000,0x00000000d9380000)
+ ParOldGen       total 84992K, used 0K [0x0000000084e00000, 0x000000008a100000, 0x00000000d6f80000)
+  object space 84992K, 0% used [0x0000000084e00000,0x0000000084e00000,0x000000008a100000)
+ Metaspace       used 4187K, capacity 4800K, committed 4864K, reserved 1056768K
+  class space    used 455K, capacity 496K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00007fd9a1049000,0x00007fd9a1423000] byte_map_base: 0x00007fd9a0c22000
+
+Marking Bits: (ParMarkBitMap*) 0x00007fd9a3aacd00
+ Begin Bits: [0x00007fd981270000, 0x00007fd983138000)
+ End Bits:   [0x00007fd983138000, 0x00007fd985000000)
+
+Polling page: 0x00007fd9a4700000
+
+CodeCache: size=245760Kb used=1149Kb max_used=1153Kb free=244611Kb
+ bounds [0x00007fd98d000000, 0x00007fd98d270000, 0x00007fd99c000000]
+ total_blobs=304 nmethods=36 adapters=183
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.066 Thread 0x00007fd99c0bd000 nmethod 28 0x00007fd98d116e90 code [0x00007fd98d117100, 0x00007fd98d118398]
+Event: 0.066 Thread 0x00007fd99c0bd000   29       3       java.util.HashMap::put (13 bytes)
+Event: 0.067 Thread 0x00007fd99c0bd000 nmethod 29 0x00007fd98d118a50 code [0x00007fd98d118be0, 0x00007fd98d118f98]
+Event: 0.067 Thread 0x00007fd99c0bd000   30       3       java.lang.System::getSecurityManager (4 bytes)
+Event: 0.067 Thread 0x00007fd99c0bd000 nmethod 30 0x00007fd98d1190d0 code [0x00007fd98d119220, 0x00007fd98d119350]
+Event: 0.067 Thread 0x00007fd99c0bd000   31       3       java.lang.StringBuilder::append (8 bytes)
+Event: 0.067 Thread 0x00007fd99c0bd000 nmethod 31 0x00007fd98d1193d0 code [0x00007fd98d119540, 0x00007fd98d1196c8]
+Event: 0.067 Thread 0x00007fd99c0bd000   32       3       java.util.HashMap$Node::<init> (26 bytes)
+Event: 0.067 Thread 0x00007fd99c0bd000 nmethod 32 0x00007fd98d119750 code [0x00007fd98d1198c0, 0x00007fd98d119ab0]
+Event: 0.068 Thread 0x00007fd99c0bd000   33       3       sun.nio.cs.UTF_8$Decoder::decode (779 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 0.020 Thread 0x00007fd99c00a800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d6f87ca8) thrown at [/jonnyzzz/hotspot/src/share/vm/prims/jni.cpp, line 4011]
+Event: 0.020 Thread 0x00007fd99c00a800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d6f87f90) thrown at [/jonnyzzz/hotspot/src/share/vm/prims/jni.cpp, line 4011]
+
+Events (10 events):
+Event: 0.067 loading class com/intellij/util/Function
+Event: 0.067 loading class com/intellij/util/Function done
+Event: 0.067 loading class java/lang/ProcessEnvironment
+Event: 0.067 loading class java/lang/ProcessEnvironment done
+Event: 0.067 loading class java/lang/ProcessEnvironment$Variable
+Event: 0.067 loading class java/lang/ProcessEnvironment$ExternalData
+Event: 0.067 loading class java/lang/ProcessEnvironment$ExternalData done
+Event: 0.067 loading class java/lang/ProcessEnvironment$Variable done
+Event: 0.067 loading class java/lang/ProcessEnvironment$Value
+Event: 0.067 loading class java/lang/ProcessEnvironment$Value done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 22545093                           /home/qolsys/Temp/idea-IC-181.4668.68/jre64/bin/java
+00600000-00601000 rw-p 00000000 08:01 22545093                           /home/qolsys/Temp/idea-IC-181.4668.68/jre64/bin/java
+021ab000-021cc000 rw-p 00000000 00:00 0                                  [heap]
+84e00000-8a100000 rw-p 00000000 00:00 0 
+8a100000-d6f80000 ---p 00000000 00:00 0 
+d6f80000-d9880000 rw-p 00000000 00:00 0 
+d9880000-100000000 ---p 00000000 00:00 0 
+100000000-100080000 rw-p 00000000 00:00 0 
+100080000-140000000 ---p 00000000 00:00 0 
+7fd94c000000-7fd94c021000 rw-p 00000000 00:00 0 
+7fd94c021000-7fd950000000 ---p 00000000 00:00 0 
+7fd950000000-7fd950021000 rw-p 00000000 00:00 0 
+7fd950021000-7fd954000000 ---p 00000000 00:00 0 
+7fd954000000-7fd95406a000 rw-p 00000000 00:00 0 
+7fd95406a000-7fd958000000 ---p 00000000 00:00 0 
+7fd958000000-7fd958082000 rw-p 00000000 00:00 0 
+7fd958082000-7fd95c000000 ---p 00000000 00:00 0 
+7fd95c000000-7fd95c021000 rw-p 00000000 00:00 0 
+7fd95c021000-7fd960000000 ---p 00000000 00:00 0 
+7fd960000000-7fd96003e000 rw-p 00000000 00:00 0 
+7fd96003e000-7fd964000000 ---p 00000000 00:00 0 
+7fd964000000-7fd964021000 rw-p 00000000 00:00 0 
+7fd964021000-7fd968000000 ---p 00000000 00:00 0 
+7fd968000000-7fd968021000 rw-p 00000000 00:00 0 
+7fd968021000-7fd96c000000 ---p 00000000 00:00 0 
+7fd96c000000-7fd96c021000 rw-p 00000000 00:00 0 
+7fd96c021000-7fd970000000 ---p 00000000 00:00 0 
+7fd970000000-7fd970021000 rw-p 00000000 00:00 0 
+7fd970021000-7fd974000000 ---p 00000000 00:00 0 
+7fd974000000-7fd974021000 rw-p 00000000 00:00 0 
+7fd974021000-7fd978000000 ---p 00000000 00:00 0 
+7fd978fff000-7fd97c000000 rw-p 00000000 00:00 0 
+7fd97c000000-7fd97c021000 rw-p 00000000 00:00 0 
+7fd97c021000-7fd980000000 ---p 00000000 00:00 0 
+7fd981270000-7fd985000000 rw-p 00000000 00:00 0 
+7fd986a57000-7fd986a6d000 r-xp 00000000 08:01 22544967                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libnet.so
+7fd986a6d000-7fd986c6d000 ---p 00016000 08:01 22544967                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libnet.so
+7fd986c6d000-7fd986c6e000 rw-p 00016000 08:01 22544967                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libnet.so
+7fd986c6e000-7fd986ee7000 rw-p 00000000 00:00 0 
+7fd986ee7000-7fd986f1a000 r--s 00628000 08:01 22151498                   /home/qolsys/Temp/idea-IC-181.4668.68/lib/util.jar
+7fd986f1a000-7fd986f1b000 ---p 00000000 00:00 0 
+7fd986f1b000-7fd98701b000 rw-p 00000000 00:00 0 
+7fd98701b000-7fd98701e000 ---p 00000000 00:00 0 
+7fd98701e000-7fd98711c000 rw-p 00000000 00:00 0 
+7fd98711c000-7fd98711f000 ---p 00000000 00:00 0 
+7fd98711f000-7fd98721d000 rw-p 00000000 00:00 0 
+7fd98721d000-7fd987220000 ---p 00000000 00:00 0 
+7fd987220000-7fd98731e000 rw-p 00000000 00:00 0 
+7fd98731e000-7fd987321000 ---p 00000000 00:00 0 
+7fd987321000-7fd98741f000 rw-p 00000000 00:00 0 
+7fd98741f000-7fd987422000 ---p 00000000 00:00 0 
+7fd987422000-7fd987520000 rw-p 00000000 00:00 0 
+7fd987520000-7fd9877f8000 r--p 00000000 08:01 60031959                   /usr/lib/locale/locale-archive
+7fd9877f8000-7fd9877fb000 ---p 00000000 00:00 0 
+7fd9877fb000-7fd9878f9000 rw-p 00000000 00:00 0 
+7fd9878f9000-7fd9878fc000 ---p 00000000 00:00 0 
+7fd9878fc000-7fd9879fa000 rw-p 00000000 00:00 0 
+7fd9879fa000-7fd9879fb000 ---p 00000000 00:00 0 
+7fd9879fb000-7fd988000000 rw-p 00000000 00:00 0 
+7fd988000000-7fd988021000 rw-p 00000000 00:00 0 
+7fd988021000-7fd98c000000 ---p 00000000 00:00 0 
+7fd98c026000-7fd98c0b7000 r--s 013b4000 08:01 22544998                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/ext/jfxrt.jar
+7fd98c0b7000-7fd98cc40000 rw-p 00000000 00:00 0 
+7fd98cc40000-7fd98d000000 ---p 00000000 00:00 0 
+7fd98d000000-7fd98d270000 rwxp 00000000 00:00 0 
+7fd98d270000-7fd99c000000 ---p 00000000 00:00 0 
+7fd99c000000-7fd99c15f000 rw-p 00000000 00:00 0 
+7fd99c15f000-7fd9a0000000 ---p 00000000 00:00 0 
+7fd9a0002000-7fd9a0395000 rw-p 00000000 00:00 0 
+7fd9a0395000-7fd9a0565000 r--s 03c54000 08:01 22545051                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/rt.jar
+7fd9a0565000-7fd9a09b4000 rw-p 00000000 00:00 0 
+7fd9a09b4000-7fd9a09b5000 ---p 00000000 00:00 0 
+7fd9a09b5000-7fd9a0ab5000 rw-p 00000000 00:00 0 
+7fd9a0ab5000-7fd9a0ab6000 ---p 00000000 00:00 0 
+7fd9a0ab6000-7fd9a0bb6000 rw-p 00000000 00:00 0 
+7fd9a0bb6000-7fd9a0bb7000 ---p 00000000 00:00 0 
+7fd9a0bb7000-7fd9a0cb7000 rw-p 00000000 00:00 0 
+7fd9a0cb7000-7fd9a0cb8000 ---p 00000000 00:00 0 
+7fd9a0cb8000-7fd9a0de2000 rw-p 00000000 00:00 0 
+7fd9a0de2000-7fd9a1049000 ---p 00000000 00:00 0 
+7fd9a1049000-7fd9a1073000 rw-p 00000000 00:00 0 
+7fd9a1073000-7fd9a12d9000 ---p 00000000 00:00 0 
+7fd9a12d9000-7fd9a12ef000 rw-p 00000000 00:00 0 
+7fd9a12ef000-7fd9a1422000 ---p 00000000 00:00 0 
+7fd9a1422000-7fd9a142d000 rw-p 00000000 00:00 0 
+7fd9a142d000-7fd9a17e3000 ---p 00000000 00:00 0 
+7fd9a17e3000-7fd9a17fd000 r-xp 00000000 08:01 22544978                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libzip.so
+7fd9a17fd000-7fd9a19fc000 ---p 0001a000 08:01 22544978                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libzip.so
+7fd9a19fc000-7fd9a19fd000 rw-p 00019000 08:01 22544978                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libzip.so
+7fd9a19fd000-7fd9a1a08000 r-xp 00000000 08:01 14684578                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fd9a1a08000-7fd9a1c07000 ---p 0000b000 08:01 14684578                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fd9a1c07000-7fd9a1c08000 r--p 0000a000 08:01 14684578                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fd9a1c08000-7fd9a1c09000 rw-p 0000b000 08:01 14684578                   /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7fd9a1c09000-7fd9a1c0f000 rw-p 00000000 00:00 0 
+7fd9a1c0f000-7fd9a1c1a000 r-xp 00000000 08:01 14684582                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fd9a1c1a000-7fd9a1e19000 ---p 0000b000 08:01 14684582                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fd9a1e19000-7fd9a1e1a000 r--p 0000a000 08:01 14684582                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fd9a1e1a000-7fd9a1e1b000 rw-p 0000b000 08:01 14684582                   /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7fd9a1e1b000-7fd9a1e31000 r-xp 00000000 08:01 14680148                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fd9a1e31000-7fd9a2030000 ---p 00016000 08:01 14680148                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fd9a2030000-7fd9a2031000 r--p 00015000 08:01 14680148                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fd9a2031000-7fd9a2032000 rw-p 00016000 08:01 14680148                   /lib/x86_64-linux-gnu/libnsl-2.23.so
+7fd9a2032000-7fd9a2034000 rw-p 00000000 00:00 0 
+7fd9a2034000-7fd9a203c000 r-xp 00000000 08:01 14680159                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fd9a203c000-7fd9a223b000 ---p 00008000 08:01 14680159                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fd9a223b000-7fd9a223c000 r--p 00007000 08:01 14680159                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fd9a223c000-7fd9a223d000 rw-p 00008000 08:01 14680159                   /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7fd9a223d000-7fd9a2267000 r-xp 00000000 08:01 22544949                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libjava.so
+7fd9a2267000-7fd9a2467000 ---p 0002a000 08:01 22544949                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libjava.so
+7fd9a2467000-7fd9a2469000 rw-p 0002a000 08:01 22544949                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libjava.so
+7fd9a2469000-7fd9a2478000 r-xp 00000000 08:01 22544977                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libverify.so
+7fd9a2478000-7fd9a2677000 ---p 0000f000 08:01 22544977                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libverify.so
+7fd9a2677000-7fd9a2679000 rw-p 0000e000 08:01 22544977                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/libverify.so
+7fd9a2679000-7fd9a2680000 r-xp 00000000 08:01 14684583                   /lib/x86_64-linux-gnu/librt-2.23.so
+7fd9a2680000-7fd9a287f000 ---p 00007000 08:01 14684583                   /lib/x86_64-linux-gnu/librt-2.23.so
+7fd9a287f000-7fd9a2880000 r--p 00006000 08:01 14684583                   /lib/x86_64-linux-gnu/librt-2.23.so
+7fd9a2880000-7fd9a2881000 rw-p 00007000 08:01 14684583                   /lib/x86_64-linux-gnu/librt-2.23.so
+7fd9a2881000-7fd9a2989000 r-xp 00000000 08:01 14680147                   /lib/x86_64-linux-gnu/libm-2.23.so
+7fd9a2989000-7fd9a2b88000 ---p 00108000 08:01 14680147                   /lib/x86_64-linux-gnu/libm-2.23.so
+7fd9a2b88000-7fd9a2b89000 r--p 00107000 08:01 14680147                   /lib/x86_64-linux-gnu/libm-2.23.so
+7fd9a2b89000-7fd9a2b8a000 rw-p 00108000 08:01 14680147                   /lib/x86_64-linux-gnu/libm-2.23.so
+7fd9a2b8a000-7fd9a37ca000 r-xp 00000000 08:01 22544982                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/server/libjvm.so
+7fd9a37ca000-7fd9a39c9000 ---p 00c40000 08:01 22544982                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/server/libjvm.so
+7fd9a39c9000-7fd9a3a99000 rw-p 00c3f000 08:01 22544982                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/server/libjvm.so
+7fd9a3a99000-7fd9a3adb000 rw-p 00000000 00:00 0 
+7fd9a3adb000-7fd9a3c9b000 r-xp 00000000 08:01 14680151                   /lib/x86_64-linux-gnu/libc-2.23.so
+7fd9a3c9b000-7fd9a3e9b000 ---p 001c0000 08:01 14680151                   /lib/x86_64-linux-gnu/libc-2.23.so
+7fd9a3e9b000-7fd9a3e9f000 r--p 001c0000 08:01 14680151                   /lib/x86_64-linux-gnu/libc-2.23.so
+7fd9a3e9f000-7fd9a3ea1000 rw-p 001c4000 08:01 14680151                   /lib/x86_64-linux-gnu/libc-2.23.so
+7fd9a3ea1000-7fd9a3ea5000 rw-p 00000000 00:00 0 
+7fd9a3ea5000-7fd9a3ea8000 r-xp 00000000 08:01 14680153                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7fd9a3ea8000-7fd9a40a7000 ---p 00003000 08:01 14680153                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7fd9a40a7000-7fd9a40a8000 r--p 00002000 08:01 14680153                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7fd9a40a8000-7fd9a40a9000 rw-p 00003000 08:01 14680153                   /lib/x86_64-linux-gnu/libdl-2.23.so
+7fd9a40a9000-7fd9a40be000 r-xp 00000000 08:01 22544931                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/jli/libjli.so
+7fd9a40be000-7fd9a42be000 ---p 00015000 08:01 22544931                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/jli/libjli.so
+7fd9a42be000-7fd9a42bf000 rw-p 00015000 08:01 22544931                   /home/qolsys/Temp/idea-IC-181.4668.68/jre64/lib/amd64/jli/libjli.so
+7fd9a42bf000-7fd9a42d7000 r-xp 00000000 08:01 14680150                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fd9a42d7000-7fd9a44d6000 ---p 00018000 08:01 14680150                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fd9a44d6000-7fd9a44d7000 r--p 00017000 08:01 14680150                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fd9a44d7000-7fd9a44d8000 rw-p 00018000 08:01 14680150                   /lib/x86_64-linux-gnu/libpthread-2.23.so
+7fd9a44d8000-7fd9a44dc000 rw-p 00000000 00:00 0 
+7fd9a44dc000-7fd9a4502000 r-xp 00000000 08:01 14680149                   /lib/x86_64-linux-gnu/ld-2.23.so
+7fd9a4519000-7fd9a45e4000 rw-p 00000000 00:00 0 
+7fd9a45e4000-7fd9a45e7000 ---p 00000000 00:00 0 
+7fd9a45e7000-7fd9a46ea000 rw-p 00000000 00:00 0 
+7fd9a46ea000-7fd9a46f1000 r--s 0003a000 08:01 22151379                   /home/qolsys/Temp/idea-IC-181.4668.68/lib/commons-codec-1.9.jar
+7fd9a46f1000-7fd9a46f5000 r--s 00034000 08:01 22151506                   /home/qolsys/Temp/idea-IC-181.4668.68/lib/xmlrpc-2.0.1.jar
+7fd9a46f5000-7fd9a46f7000 r--s 0000f000 08:01 22544650                   /home/qolsys/Temp/idea-IC-181.4668.68/plugins/git4idea/lib/git4idea-rt.jar
+7fd9a46f7000-7fd9a46ff000 rw-s 00000000 08:01 37750258                   /tmp/hsperfdata_qolsys/26883
+7fd9a46ff000-7fd9a4700000 rw-p 00000000 00:00 0 
+7fd9a4700000-7fd9a4701000 r--p 00000000 00:00 0 
+7fd9a4701000-7fd9a4702000 r--p 00025000 08:01 14680149                   /lib/x86_64-linux-gnu/ld-2.23.so
+7fd9a4702000-7fd9a4703000 rw-p 00026000 08:01 14680149                   /lib/x86_64-linux-gnu/ld-2.23.so
+7fd9a4703000-7fd9a4704000 rw-p 00000000 00:00 0 
+7ffdf53cf000-7ffdf53f1000 rw-p 00000000 00:00 0                          [stack]
+7ffdf53f1000-7ffdf53f4000 r--p 00000000 00:00 0                          [vvar]
+7ffdf53f4000-7ffdf53f6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: org.jetbrains.git4idea.http.GitAskPassApp Password for 'https://13c177621da959f577c0cc7091507d2fe30fe1a4@github.com': 
+java_class_path (initial): /home/qolsys/Temp/idea-IC-181.4668.68/plugins/git4idea/lib/git4idea-rt.jar:/home/qolsys/Temp/idea-IC-181.4668.68/lib/xmlrpc-2.0.1.jar:/home/qolsys/Temp/idea-IC-181.4668.68/lib/commons-codec-1.9.jar:/home/qolsys/Temp/idea-IC-181.4668.68/lib/util.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+PATH=/usr/lib/git-core:/home/qolsys/bin:/home/qolsys/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa3b070], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa3b070], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8a56c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8a56c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8a56c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8a56c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8a6dc0], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: [libjvm.so+0x8a84b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8a84b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8a84b0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.2 LTS"
+
+uname:Linux 4.13.0-39-generic #44~16.04.1-Ubuntu SMP Thu Apr 5 16:43:10 UTC 2018 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 31302, NOFILE 1048576, AS infinity
+load average:0.87 0.83 1.47
+
+/proc/meminfo:
+MemTotal:        8066172 kB
+MemFree:          127160 kB
+MemAvailable:     251156 kB
+Buffers:           31016 kB
+Cached:           342000 kB
+SwapCached:        37060 kB
+Active:          5646560 kB
+Inactive:        1862748 kB
+Active(anon):    5462168 kB
+Inactive(anon):  1745564 kB
+Active(file):     184392 kB
+Inactive(file):   117184 kB
+Unevictable:         112 kB
+Mlocked:             112 kB
+SwapTotal:       8284156 kB
+SwapFree:        3873952 kB
+Dirty:              4420 kB
+Writeback:             0 kB
+AnonPages:       7119628 kB
+Mapped:           242660 kB
+Shmem:            104924 kB
+Slab:             199852 kB
+SReclaimable:      83444 kB
+SUnreclaim:       116408 kB
+KernelStack:       29168 kB
+PageTables:       105028 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12317240 kB
+Committed_AS:   26278060 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      397100 kB
+DirectMap2M:     7888896 kB
+
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, tsc, tscinvbit, tscinv
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i5-3450 CPU @ 3.10GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 3401.657
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm cpuid_fault pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 6185.71
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i5-3450 CPU @ 3.10GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 3344.963
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm cpuid_fault pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 6185.71
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i5-3450 CPU @ 3.10GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 3372.744
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm cpuid_fault pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 6185.71
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i5-3450 CPU @ 3.10GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 3368.589
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm cpuid_fault pti retpoline tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 6185.71
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8066172k(126788k free), swap 8284156k(3873952k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b29) for linux-amd64 JRE (1.8.0_152-release-1136-b29), built on Apr  6 2018 09:34:54 by "root" with gcc 4.4.7 20120313 (Red Hat 4.4.7-16)
+
+time: Mon May  7 18:32:22 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
